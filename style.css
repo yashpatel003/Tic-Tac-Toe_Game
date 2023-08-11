@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./img/tiv-tac-toi-back.jpg);
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.game-info{
+    position: absolute;
+    color: black;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    background-color: rgb(242, 251, 255);
+    border: 1px solid gray;
+    border-radius: 1rem;
+    padding: 0.5rem 3rem ;
+    text-align: center;
+
+}
+
+.tic-tac-toe{
+    display: grid;
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgb(255, 246, 227);
+    border: 3px solid gray;
+    border-radius: 1rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;
+}
+
+.box{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-1,.box-2,.box-4,.box-5{
+    border-right: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+.box-3,.box-6{
+    border-bottom: 2px solid gray;
+}
+
+.box-7,.box-8{
+    border-right: 2px solid gray;
+}
+
+.win{
+    background-color: rgba(0,255,0,0.3);
+}
+
+.btn{
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    color: black;
+    background-color: rgb(242, 251, 255);
+    border: 1px solid gray;
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    /* margin-bottom: 10rem; */
+    display: none;
+}
+
+.btn.active{
+    display: flex;
+}
